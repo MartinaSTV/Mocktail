@@ -1,7 +1,9 @@
 import { PropsSaveToDo } from "../../interface"
 import {useState} from 'react'
-import './ToDoList.css'
+import './ToDoList.scss'
 
+// fixa så att stryka fungerar bättre
+// Css 
 const ToDoList = ({SaveToDo, setSaveToDo }:PropsSaveToDo) => {
     console.log(SaveToDo, 'inne i ToDoList componens')
 
@@ -18,18 +20,19 @@ const ToDoList = ({SaveToDo, setSaveToDo }:PropsSaveToDo) => {
   
     }
 
-    const todosElem = SaveToDo.map((todo, index)=> <article key={index}>
+    const todosElem = SaveToDo.map((todo, index)=> <article className="todoList" key={index}>
         {done ? <p>{todo.strDrink }</p>: <p className="strike">{ strikedDrink }</p> }
-        <img src={ todo.strDrinkThumb } alt="" />
+        <img className="todoList__img" src={ todo.strDrinkThumb } alt="" />
         <button onClick={ ()=>{  setremoved(todo.idDrink); removeToDo(); } }>x</button>
         <p onClick={ ()=>{ setDone(false); setStrikeDrink( todo.strDrink) }}>Stryk</p>
         </article> )
  
     return(
-        <section>
+        <section className="TodoArticle">
             <h1>TodoList</h1>
             <button onClick={ ()=>{ setSaveToDo([])  } }>Ta bort alla drinkar från lista</button>
-           { SaveToDo.length > 0 ? todosElem : null} 
+            <article className="TodoArticle__TodoItems">{ SaveToDo.length > 0 ? todosElem : null} </article>
+           
         </section>
     )
 }

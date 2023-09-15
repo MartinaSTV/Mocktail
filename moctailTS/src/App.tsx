@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './App.scss'
 import SearchDrinks from './components/SearchDrinks/SearchDrinks'
 import ToDoList from './components/ToDoList/ToDoList'
 import { DrinkResultFetch } from './interface'
@@ -16,10 +16,10 @@ function App() {
   console.log(SaveToDo)
   return (
 
-   <main>
+   <main className='App'>
     <h1>Mark&apos;s To-drink list</h1>
     <section><SearchDrinks  AddToDos={AddToDos}/></section>
-    <section><ToDoList SaveToDo={SaveToDo} setSaveToDo= {setSaveToDo} /></section>
+    <section className='App__todoList'><ToDoList SaveToDo={SaveToDo} setSaveToDo= {setSaveToDo} /></section>
    </main>
   )
   }

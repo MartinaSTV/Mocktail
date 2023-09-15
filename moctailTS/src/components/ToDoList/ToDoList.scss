@@ -1,0 +1,31 @@
+.strike{
+    text-decoration: line-through;
+}
+.TodoArticle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  
+    &__TodoItems{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin: 1rem;
+    }
+
+}
+.todoList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    max-width: 10rem;
+    border: 2px solid rgb(235, 158, 130);
+    border-radius: 3px;
+
+    &__img{
+        width: 100%;
+    }
+}

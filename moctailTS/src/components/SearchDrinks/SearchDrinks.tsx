@@ -2,6 +2,7 @@ import { useEffect, useState }from 'react'
 import AddToDo from '../AddToDo/AddToDo'
 import { DrinkResultFetch } from '../../interface'
 import { PropsAddTodosSearch } from '../../interface'
+import './SearchDrink.scss'
 
 const SearchDrinks = ({AddToDos}: PropsAddTodosSearch)=>{
 
@@ -40,11 +41,12 @@ const SearchDrinks = ({AddToDos}: PropsAddTodosSearch)=>{
         const foundDrinkElem  = DrinkFavorite.map((drink)=> <AddToDo  drink={ drink } key={drink.idDrink} AddToDos={AddToDos}/>)
     
     return(
-        <section>
+        <section className='SearchDrink'>
             <label htmlFor="inputDrink">Search Drink</label>
             <input type="text" placeholder="Search Drinks" id='inputDrink' onChange={  (e)=>{ setSearchedDrink( e.target.value) }} />
             <button onClick={ fetchDrink }>Search</button>
-             { DrinkFavorite.length > 0 ? foundDrinkElem : null}
+            <article>{ DrinkFavorite.length > 0 ? foundDrinkElem : null}</article>
+             
              {searchedDrink? null: ErrorMessage }
         </section>
     )
