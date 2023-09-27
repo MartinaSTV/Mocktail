@@ -8,5 +8,4 @@ describe('App', () => {
     const header = screen.getByText('drink list', { exact:false })
     expect(header).toBeInTheDocument
   });
-  
 });
