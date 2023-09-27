@@ -16,9 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3 #this is also a pre-defined action
         with:
-          node-version: 20
-      - name: change folder
-        run: cd moctailTS   
+          node-version: 20   
       - name: Printing out files
         run: ls 
 
