@@ -18,13 +18,16 @@ jobs:
         with:
           node-version: 20
       - name: change folder
-        run: cd moctailTS    
+        run: cd moctailTS   
+      - name: Printing out files
+        run: ls 
 
       - name: NPM Install #we now need to install all our dependencies in this environment
         run: npm ci #npm clean install - does not write to package.json
 
       - name: Run tests #if npm test throws and error this workflow fails.
         run: npm test
+  
 
   
 
