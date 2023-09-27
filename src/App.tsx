@@ -16,7 +16,7 @@ function App() {
   console.log(SaveToDo)
   return (
 
-   <main className='App'>
+   <main className='app'>
     <h1>Mark&apos;s To-drink list</h1>
     <section><SearchDrinks  AddToDos={AddToDos}/></section>
     <section className='App__todoList'><ToDoList SaveToDo={SaveToDo} setSaveToDo= {setSaveToDo} /></section>

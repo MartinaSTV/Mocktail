@@ -41,7 +41,7 @@ const SearchDrinks = ({AddToDos}: PropsAddTodosSearch)=>{
         const foundDrinkElem  = DrinkFavorite.map((drink)=> <AddToDo  drink={ drink } key={drink.idDrink} AddToDos={AddToDos}/>)
     
     return(
-        <section className='SearchDrink'>
+        <section className='search-drink'>
             <label htmlFor="inputDrink">Search Drink</label>
             <input type="text" placeholder="Search Drinks" id='inputDrink' onChange={  (e)=>{ setSearchedDrink( e.target.value) }} />
             <button onClick={ fetchDrink }>Search</button>

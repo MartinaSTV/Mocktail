@@ -20,18 +20,18 @@ const ToDoList = ({SaveToDo, setSaveToDo }:PropsSaveToDo) => {
   
     }
 
-    const todosElem = SaveToDo.map((todo, index)=> <article className="todoList" key={index}>
+    const todosElem = SaveToDo.map((todo, index)=> <article className="todo-list" key={index}>
         {done ? <p>{todo.strDrink }</p>: <p className="strike">{ strikedDrink }</p> }
-        <img className="todoList__img" src={ todo.strDrinkThumb } alt="" />
+        <img className="todo-list__img" src={ todo.strDrinkThumb } alt="" />
         <button onClick={ ()=>{  setremoved(todo.idDrink); removeToDo(); } }>x</button>
         <p onClick={ ()=>{ setDone(false); setStrikeDrink( todo.strDrink) }}>Stryk</p>
         </article> )
  
     return(
-        <section className="TodoArticle">
+        <section className="todo-article">
             <h1>TodoList</h1>
             <button onClick={ ()=>{ setSaveToDo([])  } }>Ta bort alla drinkar från lista</button>
-            <article className="TodoArticle__TodoItems">{ SaveToDo.length > 0 ? todosElem : null} </article>
+            <article className="todo-article__todo-items">{ SaveToDo.length > 0 ? todosElem : null} </article>
            
         </section>
     )
