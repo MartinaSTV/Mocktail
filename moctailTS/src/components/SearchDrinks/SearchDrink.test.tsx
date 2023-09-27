@@ -9,7 +9,7 @@ import App from "../../App";
 // du kan göra en json fil för att gör en mall för propsen
 //whitin (a component)
 
-
+// test av action i github
 const server = setupServer(
     rest.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic', (_req, res, ctx)=>{
       return res(
