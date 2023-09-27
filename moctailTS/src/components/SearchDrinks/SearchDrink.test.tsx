@@ -58,5 +58,4 @@ describe('SearchDrink component', () => {
         await user.click(screen.getByRole('button', {name: /Search/i}));
         expect( await screen.findByText('Kunde inte hitta drink', { exact: false}))
       })
-
   });
