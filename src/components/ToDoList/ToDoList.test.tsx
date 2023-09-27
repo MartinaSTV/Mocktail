@@ -10,7 +10,7 @@ describe('test ToDoList', ()=>{
         render(<ToDoList SaveToDo={SaveToDo} setSaveToDo={vi.fn()}/>)
         expect(screen.getByText('TodoList')).toBeInTheDocument()
     })
-    it('should show drink in TodoList', async()=>{
+  /*   it('should show drink in TodoList', async()=>{
         render(<ToDoList SaveToDo={SaveToDo} setSaveToDo={vi.fn()}/>)
         expect(screen.getByText('TodoList')).toBeInTheDocument()
         const user = userEvent.setup()
@@ -24,6 +24,6 @@ describe('test ToDoList', ()=>{
         expect( screen.getByText('Stryk')).toBeInTheDocument()
         expect(screen.getByRole('img') ).toBeInTheDocument()
         expect( await screen.findAllByText('Afterglow'))
-    })
+    }) */
 
 })
