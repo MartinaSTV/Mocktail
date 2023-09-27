@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v3 #this is also a pre-defined action
         with:
           node-version: 20
+      - name: change folder
+        run: cd moctailTS    
 
       - name: NPM Install #we now need to install all our dependencies in this environment
         run: npm ci #npm clean install - does not write to package.json
