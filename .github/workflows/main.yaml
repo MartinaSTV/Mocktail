@@ -26,7 +26,6 @@ jobs:
       - name: Run tests #if npm test throws and error this workflow fails.
         run: npm test
 
-name: Lint
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
