@@ -41,8 +41,10 @@ jobs:
       - name: NPM Install #we now need to install all our dependencies in this environment
         run: npm ci #npm clean install - does not write to package.json
 
-      - name: Run linters 
-        run: run lint
+       - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          eslint: true
  
  
  
